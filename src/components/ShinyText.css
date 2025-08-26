@@ -1,0 +1,68 @@
+.shiny-text {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(
+        90deg,
+        #ffffff 0%,
+        #ff8c42 25%,
+        #ff6b35 50%,
+        #ff8c42 75%,
+        #ffffff 100%
+    );
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shiny-sweep 3s ease-in-out infinite;
+    font-weight: 600;
+}
+
+.shiny-text.disabled {
+    animation: none;
+    background: #ffffff;
+    -webkit-text-fill-color: #ffffff;
+}
+
+@keyframes shiny-sweep {
+    0% {
+        background-position: 200% 0;
+    }
+    50% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Orange variant for project cards */
+.shiny-text.orange {
+    background: linear-gradient(
+        90deg,
+        #ffffff 0%,
+        #ff8c42 25%,
+        #ff6b35 50%,
+        #ff8c42 75%,
+        #ffffff 100%
+    );
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Subtle variant for smaller text */
+.shiny-text.subtle {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.8) 0%,
+        rgba(255, 140, 66, 0.9) 25%,
+        rgba(255, 107, 53, 0.9) 50%,
+        rgba(255, 140, 66, 0.9) 75%,
+        rgba(255, 255, 255, 0.8) 100%
+    );
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

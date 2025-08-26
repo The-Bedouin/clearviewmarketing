@@ -6,12 +6,15 @@
   --foreground: #171717;
 }
 
+/* stylelint-disable at-rule-no-unknown */
+/* Tailwind v4 experimental @theme block. Some linters may warn, safe to ignore */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
 }
+/* stylelint-enable at-rule-no-unknown */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -62,8 +65,45 @@ html {
   }
 }
 
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
 }
 
 /* Hover effects */
@@ -73,4 +113,656 @@ html {
 
 .hover-lift:hover {
   transform: translateY(-2px);
+}
+
+/* Hide scrollbar for horizontal scroll */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+/* Enhanced blur effects */
+.backdrop-blur-custom {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Gradient text utilities */
+.gradient-text {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Enhanced button hover effects */
+.btn-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-hover:hover::before {
+  left: 100%;
+}
+
+/* Project card animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .project-card {
+    animation-delay: 0.1s !important;
+  }
+  
+  .mobile-optimized {
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .mobile-optimized > * {
+    scroll-snap-align: start;
+  }
+}
+
+/* Enhanced hover effects for project cards */
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Gradient text animations */
+.gradient-text-animate {
+  background: linear-gradient(45deg, #3b82f6, #1d4ed8, #7c3aed, #3b82f6);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Lenis/Framer-friendly smooth scrolling helpers */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important; /* let Lenis control scrolling */
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Mobile carousel refinements to mimic Framer feel */
+.mobile-optimized {
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.mobile-optimized > * {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Reduce "rubber band" effect on iOS during drag */
+body {
+  overscroll-behavior-y: none;
+}
+
+/* ScrollStack base styles */
+.scroll-stack-scroller {
+  height: 100vh;
+  overflow: auto; /* use native scroll when smoothing disabled */
+  position: relative;
+  overscroll-behavior-y: contain; /* prevent rubber band bounce */
+}
+
+.scroll-stack-inner {
+  position: relative;
+  padding-top: 10vh;
+  padding-bottom: 40vh; /* space to release last pin */
+}
+
+/* Keep transitions minimal inside ScrollStack; transforms are controlled by JS */
+.scroll-stack-scroller .scroll-stack-card {
+  transition: none !important;
+}
+
+.scroll-stack-card {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  border-radius: 1.25rem; /* 20px */
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.35);
+  transition: none !important; /* prevent bounce during pin */
+}
+
+/* Make cards visually fill most of viewport */
+.scroll-stack-card > .stack-card-content {
+  min-height: 72vh; /* nearly fill section */
+}
+
+@media (max-width: 768px) {
+  .scroll-stack-card {
+    width: calc(100% - 24px);
+  }
+  .scroll-stack-card > .stack-card-content {
+    min-height: 78vh;
+  }
+}
+
+/* Services Section Animations */
+@keyframes serviceCardSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes serviceIconFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.05);
+  }
+}
+
+@keyframes gradientBorderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes backgroundShift {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.05) rotate(1deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes glassShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Service card animations with staggered delays */
+.service-card {
+  animation: serviceCardSlideIn 0.8s ease-out forwards;
+  opacity: 0;
+  position: relative;
+  min-height: 480px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+.service-card:nth-child(4) { animation-delay: 0.4s; }
+.service-card:nth-child(5) { animation-delay: 0.5s; }
+.service-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Apple-like glass morphism effect */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 100%);
+  border-radius: 24px;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: -1;
+}
+
+/* Service icon hover animations */
+.service-icon {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.service-card:hover .service-icon {
+  animation: serviceIconFloat 2s ease-in-out infinite;
+  transform: scale(1.1);
+}
+
+.service-card:hover .service-icon::before {
+  left: 100%;
+}
+
+/* Background image animations */
+.service-card .absolute.inset-0 > div:last-child {
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover .absolute.inset-0 > div:last-child {
+  animation: backgroundShift 3s ease-in-out infinite;
+}
+
+/* Enhanced hover effects */
+.service-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 0 40px rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient border animation on hover */
+.service-card::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(45deg, var(--gradient-color), transparent, var(--gradient-color));
+  background-size: 200% 200%;
+  border-radius: 24px;
+  z-index: -2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover::after {
+  opacity: 1;
+  animation: gradientBorderFlow 2s ease infinite;
+}
+
+/* Mobile-first responsive adjustments */
+@media (max-width: 768px) {
+  .service-card {
+    animation-delay: 0.1s !important;
+    margin-bottom: 1rem;
+    min-height: 420px;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+  
+  /* Optimize touch interactions */
+  .service-card {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  
+  /* Reduce animation complexity on mobile for better performance */
+  .service-card:hover .service-icon {
+    animation: none;
+    transform: scale(1.05);
+  }
+  
+  .service-card:hover .absolute.inset-0 > div:last-child {
+    animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .service-card {
+    padding: 1.5rem;
+    min-height: 380px;
+  }
+  
+  .service-card h3 {
+    font-size: 1.25rem;
+  }
+  
+  .service-card p {
+    font-size: 0.875rem;
+  }
+  
+  .service-icon {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+}
+
+/* Enhanced backdrop blur for better mobile performance */
+@media (max-width: 768px) {
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  
+  .backdrop-blur-md {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  
+  .service-card::before {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+}
+
+/* Smooth scroll snap for mobile */
+@media (max-width: 768px) {
+  .services-grid {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  .service-card {
+    scroll-snap-align: start;
+  }
+}
+
+/* Loading state animations */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.service-card.loading {
+  background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .service-card,
+  .service-icon,
+  .service-card::before,
+  .service-card::after,
+  .service-card .absolute.inset-0 > div:last-child {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .service-card:hover {
+    transform: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .service-card {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .service-card:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+/* Apple-like typography enhancements */
+.service-card h3 {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.service-card p {
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+/* Enhanced glass morphism for icons */
+.service-icon {
+  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(249, 115, 22, 0.3) !important;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(249, 115, 22, 0.2);
+}
+
+/* Sophisticated button styling */
+.service-card .w-10.h-10 {
+  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(249, 115, 22, 0.3) !important;
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(249, 115, 22, 0.2);
+}
+
+/* Why Choose Us Section Styles */
+.why-choose-card {
+  animation: serviceCardSlideIn 0.8s ease-out forwards;
+  opacity: 0;
+  position: relative;
+  min-height: 420px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.why-choose-card:nth-child(1) { animation-delay: 0.1s; }
+.why-choose-card:nth-child(2) { animation-delay: 0.2s; }
+.why-choose-card:nth-child(3) { animation-delay: 0.3s; }
+.why-choose-card:nth-child(4) { animation-delay: 0.4s; }
+.why-choose-card:nth-child(5) { animation-delay: 0.5s; }
+.why-choose-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Why Choose Us glass morphism effect */
+.why-choose-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 100%);
+  border-radius: 24px;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: -1;
+}
+
+/* Why Choose Us icon styles */
+.why-choose-icon {
+  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(249, 115, 22, 0.3) !important;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(249, 115, 22, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.why-choose-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.why-choose-card:hover .why-choose-icon {
+  animation: serviceIconFloat 2s ease-in-out infinite;
+  transform: scale(1.1);
+}
+
+.why-choose-card:hover .why-choose-icon::before {
+  left: 100%;
+}
+
+/* Why Choose Us hover effects */
+.why-choose-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(249, 115, 22, 0.1),
+    0 0 40px rgba(249, 115, 22, 0.1);
+}
+
+/* Why Choose Us gradient border animation */
+.why-choose-card::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(45deg, #f97316, transparent, #f97316);
+  background-size: 200% 200%;
+  border-radius: 24px;
+  z-index: -2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.why-choose-card:hover::after {
+  opacity: 1;
+  animation: gradientBorderFlow 2s ease infinite;
+}
+
+/* Mobile optimizations for Why Choose Us */
+@media (max-width: 768px) {
+  .why-choose-card {
+    animation-delay: 0.1s !important;
+    margin-bottom: 1rem;
+    min-height: 380px;
+  }
+  
+  .why-choose-card:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+  
+  .why-choose-card {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  
+  .why-choose-card:hover .why-choose-icon {
+    animation: none;
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 640px) {
+  .why-choose-card {
+    padding: 1.5rem;
+    min-height: 340px;
+  }
+  
+  .why-choose-card h3 {
+    font-size: 1.25rem;
+  }
+  
+  .why-choose-card p {
+    font-size: 0.875rem;
+  }
+  
+  .why-choose-icon {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
 }
