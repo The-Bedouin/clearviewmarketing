@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         hostname: 'packmateindustries.com',
         pathname: '/assets/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**',
+      },
     ],
   },
 };

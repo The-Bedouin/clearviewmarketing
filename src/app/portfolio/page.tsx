@@ -37,20 +37,20 @@ const ITEMS: PortfolioItem[] = [
     image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1600&auto=format&fit=crop',
   },
   {
-    id: 'barbershop-amsterdam',
-    title: 'City Center Barbershop, Amsterdam',
+    id: 'citycenterbarbershop',
+    title: 'City Center Barbershop',
     year: '2024',
     category: 'Google Ads',
-    subtitle: 'Google Ads & SEO',
+    subtitle: 'Advertising & SEO',
     badge: 'Local SEO',
-    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1600&auto=format&fit=crop',
   },
   {
     id: 'amabills',
     title: 'Amabills Technologies',
     year: '2024',
-    category: 'Social',
-    subtitle: 'Social Media',
+    category: 'Content',
+    subtitle: 'Content Marketing & Digital Presence',
     badge: 'Tech',
     image: 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop',
   },
@@ -305,6 +305,46 @@ export default function PortfolioPage() {
                         </div>
                       </div>
                     </Link>
+                  ) : item.id === 'citycenterbarbershop' ? (
+                    <Link href="/portfolio/citycenterbarbershop" className="block">
+                      <div className="stack-card-content relative p-0 overflow-hidden rounded-3xl">
+                        <div className="absolute inset-0">
+                          <Image src={item.image} alt={item.title} fill className="object-cover" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                        </div>
+                        <div className="absolute top-3 left-3 flex items-center gap-2">
+                          <span className="text-xs text-white/90 bg-black/50 rounded-full px-2 py-1 border border-white/10">{item.year}</span>
+                          {item.badge && (
+                            <span className="text-xs text-orange-300 bg-orange-500/20 rounded-full px-2 py-1 border border-orange-500/30">{item.badge}</span>
+                          )}
+                        </div>
+                        <div className="absolute bottom-4 left-4 right-4">
+                          <div className="text-sm text-blue-300 mb-1">{item.category}</div>
+                          <h3 className="text-2xl font-semibold text-white">{item.title}</h3>
+                          <p className="text-gray-300 text-sm">{item.subtitle}</p>
+                        </div>
+                      </div>
+                    </Link>
+                  ) : item.id === 'amabills' ? (
+                    <Link href="/portfolio/amabills" className="block">
+                      <div className="stack-card-content relative p-0 overflow-hidden rounded-3xl">
+                        <div className="absolute inset-0">
+                          <Image src={item.image} alt={item.title} fill className="object-cover" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                        </div>
+                        <div className="absolute top-3 left-3 flex items-center gap-2">
+                          <span className="text-xs text-white/90 bg-black/50 rounded-full px-2 py-1 border border-white/10">{item.year}</span>
+                          {item.badge && (
+                            <span className="text-xs text-orange-300 bg-orange-500/20 rounded-full px-2 py-1 border border-orange-500/30">{item.badge}</span>
+                          )}
+                        </div>
+                        <div className="absolute bottom-4 left-4 right-4">
+                          <div className="text-sm text-blue-300 mb-1">{item.category}</div>
+                          <h3 className="text-2xl font-semibold text-white">{item.title}</h3>
+                          <p className="text-gray-300 text-sm">{item.subtitle}</p>
+                        </div>
+                      </div>
+                    </Link>
                   ) : (
                     <div className="stack-card-content relative p-0 overflow-hidden rounded-3xl">
                       <div className="absolute inset-0">
@@ -369,6 +409,54 @@ export default function PortfolioPage() {
                     </Link>
                   ) : item.id === 'medicus' ? (
                     <Link href="/portfolio/medicus" className="block h-full">
+                      <TiltedCard
+                        imageSrc={item.image}
+                        altText={item.title}
+                        captionText={`${item.title} — ${item.category}`}
+                        containerHeight="100%"
+                        containerWidth="100%"
+                        imageHeight="100%"
+                        imageWidth="100%"
+                        rotateAmplitude={8}
+                        scaleOnHover={1.08}
+                        showMobileWarning={false}
+                        showTooltip={false}
+                        displayOverlayContent={true}
+                        overlayContent={(
+                          <div className="w-full px-6 pb-5 self-end">
+                            <div className="text-sm text-blue-300 mb-1">{item.category}</div>
+                            <h3 className="text-2xl font-semibold text-white">{item.title}</h3>
+                            <p className="text-gray-300 text-sm">{item.subtitle}</p>
+                          </div>
+                        )}
+                      />
+                    </Link>
+                  ) : item.id === 'citycenterbarbershop' ? (
+                    <Link href="/portfolio/citycenterbarbershop" className="block h-full">
+                      <TiltedCard
+                        imageSrc={item.image}
+                        altText={item.title}
+                        captionText={`${item.title} — ${item.category}`}
+                        containerHeight="100%"
+                        containerWidth="100%"
+                        imageHeight="100%"
+                        imageWidth="100%"
+                        rotateAmplitude={8}
+                        scaleOnHover={1.08}
+                        showMobileWarning={false}
+                        showTooltip={false}
+                        displayOverlayContent={true}
+                        overlayContent={(
+                          <div className="w-full px-6 pb-5 self-end">
+                            <div className="text-sm text-blue-300 mb-1">{item.category}</div>
+                            <h3 className="text-2xl font-semibold text-white">{item.title}</h3>
+                            <p className="text-gray-300 text-sm">{item.subtitle}</p>
+                          </div>
+                        )}
+                      />
+                    </Link>
+                  ) : item.id === 'amabills' ? (
+                    <Link href="/portfolio/amabills" className="block h-full">
                       <TiltedCard
                         imageSrc={item.image}
                         altText={item.title}
