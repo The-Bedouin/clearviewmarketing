@@ -30,8 +30,12 @@ export default function AboutPage() {
           <div className="flex justify-between items-center h-16">
             {/* Logo with enhanced hover effects */}
             <div className="flex-shrink-0">
-              <Link href="/" className="text-2xl font-bold text-white hover:text-blue-400 transition-all duration-300 cursor-pointer transform hover:scale-105">
-                Clearview Marketing
+              <Link href="/" className="block">
+                <img 
+                  src="/long.svg" 
+                  alt="Clearview Marketing" 
+                  className="h-8 w-auto hover:opacity-80 transition-all duration-300 cursor-pointer transform hover:scale-105"
+                />
               </Link>
               </div>
             
@@ -480,10 +484,11 @@ export default function AboutPage() {
             {/* Brand + socials */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center shadow-lg shadow-orange-500/10">
-                  <span className="text-white text-sm font-bold">CM</span>
-                </div>
-                <div className="text-white font-semibold">Clearview Marketing</div>
+                <img 
+                  src="/long.svg" 
+                  alt="Clearview Marketing" 
+                  className="h-8 w-auto"
+                />
               </div>
               <p className="text-gray-400 text-sm leading-relaxed mb-5">
                 Performance-driven digital marketing. We turn attention into measurable growth.

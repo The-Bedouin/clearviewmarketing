@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import ScrollStack, { ScrollStackItem } from "../components/ScrollStack";
 import ShinyText from "../components/ShinyText";
+import Aurora from "../components/Aurora";
 
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -110,12 +111,16 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            {/* Logo with enhanced hover effects */}
-            <div className="flex-shrink-0">
-              <div className="text-2xl font-bold text-white hover:text-blue-400 transition-all duration-300 cursor-pointer transform hover:scale-105">
-                Clearview Marketing
+              {/* Logo with enhanced hover effects */}
+              <div className="flex-shrink-0">
+                <Link href="/" className="block">
+                  <img 
+                    src="/long.svg" 
+                    alt="Clearview Marketing" 
+                    className="h-8 w-auto hover:opacity-80 transition-all duration-300 cursor-pointer transform hover:scale-105"
+                  />
+                </Link>
               </div>
-            </div>
             
             {/* Desktop Navigation Links with improved animations */}
             <div className="hidden md:block">
@@ -195,6 +200,15 @@ export default function Home() {
 
       {/* Enhanced Hero Section with scroll-triggered animations */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Aurora Background */}
+        <div className="absolute inset-0 -z-10">
+          <Aurora
+            colorStops={["#111827", "#374151", "#111827"]}
+            blend={0.24}
+            amplitude={1.5}
+            speed={1}
+          />
+        </div>
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             {/* Enhanced Badge with better styling */}
@@ -250,7 +264,7 @@ export default function Home() {
             >
               Digital Marketing
               <br />
-              <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
+              <span className="text-gray-400">
                 That Drives Results.
               </span>
             </h1>
@@ -408,7 +422,7 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
               What We Do for
               <br />
-              <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">
                 Our Clients
               </span>
             </h2>
@@ -773,22 +787,31 @@ export default function Home() {
           <div className="text-center mt-8 sm:mt-16">
             <div className="relative">
               {/* Glowing background effect */}
-              <div className="absolute -inset-4 sm:-inset-6 bg-gradient-to-r from-orange-500/20 via-blue-500/20 to-purple-500/20 rounded-3xl blur-2xl"></div>
+              <div className="absolute -inset-4 sm:-inset-6 bg-gradient-to-r from-gray-700/20 via-gray-600/20 to-gray-700/20 rounded-3xl blur-2xl"></div>
               
               {/* Main content container */}
               <div className="relative bg-gradient-to-br from-black/60 via-gray-900/40 to-black/60 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-white/10 shadow-2xl">
+                {/* Aurora Background */}
+                <div className="absolute inset-0 -z-10">
+                  <Aurora
+                    colorStops={["#111827", "#374151", "#111827"]}
+                    blend={0.24}
+                    amplitude={1.5}
+                    speed={1}
+                  />
+                </div>
                 {/* Animated background pattern */}
                 <div className="absolute inset-0 opacity-5">
                   <div className="absolute inset-0" style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f97316' fill-opacity='0.3'%3E%3Cpath d='M20 20c0 11.046-8.954 20-20 20s-20-8.954-20-20 8.954-20 20-20 20 8.954 20 20zm0 0c0-11.046 8.954-20 20-20s20 8.954 20 20-8.954 20-20 20-20-8.954-20-20z'/%3E%3C/g%3E%3C/svg%3E")`,
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239ca3af' fill-opacity='0.3'%3E%3Cpath d='M20 20c0 11.046-8.954 20-20 20s-20-8.954-20-20 8.954-20 20-20 20 8.954 20 20zm0 0c0-11.046 8.954-20 20-20s20 8.954 20 20-8.954 20-20 20-20-8.954-20-20z'/%3E%3C/g%3E%3C/svg%3E")`,
                   }}></div>
                 </div>
 
                 {/* Content */}
                 <div className="relative z-10">
                   {/* Badge */}
-                  <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/20 to-orange-600/20 backdrop-blur-sm text-orange-400 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6 border border-orange-500/30">
-                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-orange-500 rounded-full animate-pulse"></div>
+                  <div className="inline-flex items-center gap-2 bg-gradient-to-r from-gray-600/20 to-gray-500/20 backdrop-blur-sm text-gray-300 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6 border border-gray-500/30">
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full animate-pulse"></div>
                     <span className="hidden sm:inline">Start Your Digital Transformation</span>
                     <span className="sm:hidden">Digital Transformation</span>
                   </div>
@@ -796,7 +819,7 @@ export default function Home() {
                   {/* Main heading */}
                   <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
                     Ready to
-                    <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent mx-2 sm:mx-3">
+                    <span className="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 bg-clip-text text-transparent mx-2 sm:mx-3">
                       Transform
                     </span>
                     Your Digital Presence?
@@ -810,16 +833,16 @@ export default function Home() {
 
                   {/* Stats row - Compact */}
                   <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-6 sm:mb-8 max-w-2xl mx-auto">
-                    <div className="bg-gradient-to-r from-orange-500/10 to-orange-600/10 rounded-lg sm:rounded-xl p-2 sm:p-4 border border-orange-500/20 backdrop-blur-sm">
-                      <div className="text-lg sm:text-2xl font-bold text-orange-400">500+</div>
+                    <div className="bg-gradient-to-r from-gray-700/10 to-gray-600/10 rounded-lg sm:rounded-xl p-2 sm:p-4 border border-gray-600/20 backdrop-blur-sm">
+                      <div className="text-lg sm:text-2xl font-bold text-gray-200">500+</div>
                       <div className="text-gray-300 text-xs">Happy Clients</div>
                     </div>
-                    <div className="bg-gradient-to-r from-blue-500/10 to-blue-600/10 rounded-lg sm:rounded-xl p-2 sm:p-4 border border-blue-500/20 backdrop-blur-sm">
-                      <div className="text-lg sm:text-2xl font-bold text-blue-400">300%</div>
+                    <div className="bg-gradient-to-r from-gray-700/10 to-gray-600/10 rounded-lg sm:rounded-xl p-2 sm:p-4 border border-gray-600/20 backdrop-blur-sm">
+                      <div className="text-lg sm:text-2xl font-bold text-gray-200">300%</div>
                       <div className="text-gray-300 text-xs">Average ROI</div>
                     </div>
-                    <div className="bg-gradient-to-r from-purple-500/10 to-purple-600/10 rounded-lg sm:rounded-xl p-2 sm:p-4 border border-purple-500/20 backdrop-blur-sm">
-                      <div className="text-lg sm:text-2xl font-bold text-purple-400">95%</div>
+                    <div className="bg-gradient-to-r from-gray-700/10 to-gray-600/10 rounded-lg sm:rounded-xl p-2 sm:p-4 border border-gray-600/20 backdrop-blur-sm">
+                      <div className="text-lg sm:text-2xl font-bold text-gray-200">95%</div>
                       <div className="text-gray-300 text-xs">Success Rate</div>
                     </div>
                   </div>
@@ -828,7 +851,7 @@ export default function Home() {
                   <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                     <a 
                       href="https://okconsulting.as.me/?appointmentType=59448363" 
-                      className="bg-white/10 hover:bg-white/15 text-white px-6 py-3 rounded-full text-base font-semibold transition-all duration-300 border border-white/15 text-center"
+                      className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 rounded-full text-base font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/25 text-center"
                     >
                       Schedule a Discovery Call
                     </a>
@@ -935,8 +958,8 @@ export default function Home() {
               </div>
               <div className="lg:w-1/2">
                 <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-xl"></div>
-                  <div className="relative bg-gradient-to-br from-blue-900/20 to-purple-900/20 backdrop-blur-sm rounded-3xl p-8 border border-blue-500/20">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-gray-500/20 to-gray-600/20 rounded-3xl blur-xl"></div>
+                  <div className="relative bg-gradient-to-br from-gray-900/20 to-gray-800/20 backdrop-blur-sm rounded-3xl p-8 border border-gray-500/20">
                     <img 
                       src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                       alt="Data Analytics Dashboard" 
@@ -951,17 +974,17 @@ export default function Home() {
             <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
               <div className="lg:w-1/2">
                 <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-3xl blur-xl"></div>
-                  <div className="relative bg-black/40 backdrop-blur-sm rounded-3xl p-8 border border-green-500/20">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-orange-500/20 to-orange-600/20 rounded-3xl blur-xl"></div>
+                  <div className="relative bg-black/40 backdrop-blur-sm rounded-3xl p-8 border border-orange-500/20">
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-2xl flex items-center justify-center">
+                      <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center">
                         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
                         </svg>
                       </div>
                       <div>
                         <h3 className="text-3xl font-bold text-white">Expert Team</h3>
-                        <p className="text-green-400 text-lg">Certified Professionals</p>
+                        <p className="text-orange-400 text-lg">Certified Professionals</p>
                       </div>
                     </div>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
@@ -969,17 +992,17 @@ export default function Home() {
                       with years of experience driving results for businesses across all industries.
                     </p>
                     <div className="flex flex-wrap gap-3">
-                      <span className="bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium border border-green-500/30">Google Certified</span>
-                      <span className="bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium border border-blue-500/30">5+ Years Experience</span>
-                      <span className="bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium border border-purple-500/30">Industry Experts</span>
+                      <span className="bg-orange-500/20 text-orange-400 px-4 py-2 rounded-full text-sm font-medium border border-orange-500/30">Google Certified</span>
+                      <span className="bg-orange-500/20 text-orange-400 px-4 py-2 rounded-full text-sm font-medium border border-orange-500/30">5+ Years Experience</span>
+                      <span className="bg-orange-500/20 text-orange-400 px-4 py-2 rounded-full text-sm font-medium border border-orange-500/30">Industry Experts</span>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="lg:w-1/2">
                 <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-3xl blur-xl"></div>
-                  <div className="relative bg-gradient-to-br from-green-900/20 to-blue-900/20 backdrop-blur-sm rounded-3xl p-8 border border-green-500/20">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-gray-500/20 to-gray-600/20 rounded-3xl blur-xl"></div>
+                  <div className="relative bg-gradient-to-br from-gray-900/20 to-gray-800/20 backdrop-blur-sm rounded-3xl p-8 border border-gray-500/20">
                     <img 
                       src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                       alt="Professional Team" 
@@ -994,17 +1017,17 @@ export default function Home() {
             <div className="flex flex-col lg:flex-row items-center gap-12">
               <div className="lg:w-1/2">
                 <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl blur-xl"></div>
-                  <div className="relative bg-black/40 backdrop-blur-sm rounded-3xl p-8 border border-purple-500/20">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-orange-500/20 to-orange-600/20 rounded-3xl blur-xl"></div>
+                  <div className="relative bg-black/40 backdrop-blur-sm rounded-3xl p-8 border border-orange-500/20">
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
+                      <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center">
                         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                         </svg>
                       </div>
                       <div>
                         <h3 className="text-3xl font-bold text-white">Proven Track Record</h3>
-                        <p className="text-purple-400 text-lg">Success Stories</p>
+                        <p className="text-orange-400 text-lg">Success Stories</p>
                       </div>
                     </div>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
@@ -1013,15 +1036,15 @@ export default function Home() {
                     </p>
                     <div className="grid grid-cols-3 gap-4">
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-purple-400">500+</div>
+                        <div className="text-3xl font-bold text-orange-400">500+</div>
                         <div className="text-sm text-gray-300">Clients Served</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-pink-400">95%</div>
+                        <div className="text-3xl font-bold text-orange-400">95%</div>
                         <div className="text-sm text-gray-300">Success Rate</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-purple-400">$2M+</div>
+                        <div className="text-3xl font-bold text-orange-400">$2M+</div>
                         <div className="text-sm text-gray-300">Revenue Generated</div>
                       </div>
                     </div>
@@ -1030,8 +1053,8 @@ export default function Home() {
               </div>
               <div className="lg:w-1/2">
                 <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl blur-xl"></div>
-                  <div className="relative bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-sm rounded-3xl p-8 border border-purple-500/20">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-gray-500/20 to-gray-600/20 rounded-3xl blur-xl"></div>
+                  <div className="relative bg-gradient-to-br from-gray-900/20 to-gray-800/20 backdrop-blur-sm rounded-3xl p-8 border border-gray-500/20">
                     <img 
                       src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                       alt="Success Metrics" 
@@ -1529,12 +1552,13 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 items-start">
             {/* Brand + socials */}
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center shadow-lg shadow-orange-500/10">
-                  <span className="text-white text-sm font-bold">CM</span>
+                <div className="flex items-center gap-3 mb-4">
+                  <img 
+                    src="/long.svg" 
+                    alt="Clearview Marketing" 
+                    className="h-8 w-auto"
+                  />
                 </div>
-                <div className="text-white font-semibold">Clearview Marketing</div>
-              </div>
               <p className="text-gray-400 text-sm leading-relaxed mb-5">
                 Performance-driven digital marketing. We turn attention into measurable growth.
               </p>
