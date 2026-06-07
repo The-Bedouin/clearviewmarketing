@@ -427,7 +427,7 @@ export default function Home() {
               </span>
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              We don't just create campaigns, we build digital growth engines. Our data-driven strategies 
+              We don&apos;t just create campaigns, we build digital growth engines. Our data-driven strategies 
               transform your business goals into measurable results across all digital channels.
             </p>
           </div>
@@ -827,8 +827,8 @@ export default function Home() {
 
                   {/* Description */}
                   <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
-                    <span className="hidden sm:inline">Let's discuss how our comprehensive digital marketing services can drive growth and deliver measurable results for your business.</span>
-                    <span className="sm:hidden">Let's discuss how our digital marketing services can drive growth for your business.</span>
+                    <span className="hidden sm:inline">Let&apos;s discuss how our comprehensive digital marketing services can drive growth and deliver measurable results for your business.</span>
+                    <span className="sm:hidden">Let&apos;s discuss how our digital marketing services can drive growth for your business.</span>
                   </p>
 
                   {/* Stats row - Compact */}
@@ -915,8 +915,8 @@ export default function Home() {
               That Drives Results
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              We don't just create campaigns—we build digital growth engines that deliver measurable results. 
-              Here's what sets us apart in the competitive digital marketing landscape.
+              We don&apos;t just create campaigns—we build digital growth engines that deliver measurable results. 
+              Here&apos;s what sets us apart in the competitive digital marketing landscape.
             </p>
           </div>
 
@@ -1031,7 +1031,7 @@ export default function Home() {
                       </div>
                     </div>
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      Our portfolio speaks for itself. We've helped hundreds of businesses achieve their digital 
+                      Our portfolio speaks for itself. We&apos;ve helped hundreds of businesses achieve their digital 
                       marketing goals with consistent, measurable results across all industries.
                     </p>
                     <div className="grid grid-cols-3 gap-4">
@@ -1248,7 +1248,7 @@ export default function Home() {
               <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent mx-4">
                 Questions?
               </span>
-              We've Got Answers
+              We&apos;ve Got Answers
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Everything you need to know about our digital marketing services, processes, and what makes us different.
@@ -1283,7 +1283,7 @@ export default function Home() {
                     </div>
                   </button>
                   <div className={`px-8 pb-6 text-gray-300 leading-relaxed overflow-hidden transition-all duration-300 ${openFAQ === 0 ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                    <p>Results vary by service and industry, but here's what you can expect:</p>
+                    <p>Results vary by service and industry, but here&apos;s what you can expect:</p>
                     <ul className="mt-3 space-y-2 text-sm">
                       <li className="flex items-start gap-3">
                         <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
@@ -1504,7 +1504,7 @@ export default function Home() {
                         <span>Manufacturing</span>
                       </div>
                     </div>
-                    <p className="mt-4 text-orange-400 font-medium">Don't see your industry? We can create custom strategies for any business!</p>
+                    <p className="mt-4 text-orange-400 font-medium">Don&apos;t see your industry? We can create custom strategies for any business!</p>
                   </div>
                 </div>
               </div>

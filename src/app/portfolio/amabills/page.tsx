@@ -143,7 +143,7 @@ export default function AmabillsCaseStudyPage() {
             <div className="inline-flex items-center gap-2 bg-white/5 text-gray-200 px-3 py-1.5 rounded-full text-xs border border-white/10 mb-4">
               Project Overview
             </div>
-            <h2 className="text-2xl sm:text-3xl font-semibold mb-4">Establishing a leading software development brand in Nigeria's tech ecosystem</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold mb-4">Establishing a leading software development brand in Nigeria&apos;s tech ecosystem</h2>
             <p className="text-gray-300 leading-relaxed">
               Amabills Technologies needed to position themselves as the premier ICT solutions provider in Nigeria. We developed a comprehensive digital strategy to showcase their expertise across multiple sectors and attract enterprise clients seeking cutting-edge software solutions.
             </p>
@@ -156,12 +156,12 @@ export default function AmabillsCaseStudyPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center sm:text-left mb-8">
             <div className="inline-flex items-center gap-2 bg-white/5 text-gray-200 px-3 py-1.5 rounded-full text-xs border border-white/10 mb-3">The Challenge</div>
-            <h3 className="text-3xl font-semibold">Building credibility in Nigeria's competitive tech landscape</h3>
+            <h3 className="text-3xl font-semibold">Building credibility in Nigeria&apos;s competitive tech landscape</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-black/40 border border-white/10 rounded-2xl p-6">
               <h4 className="text-white font-semibold mb-2">Limited brand recognition</h4>
-              <p className="text-gray-400 text-sm">New company competing against established software development firms in Nigeria's growing tech sector.</p>
+              <p className="text-gray-400 text-sm">New company competing against established software development firms in Nigeria&apos;s growing tech sector.</p>
             </div>
             <div className="bg-black/40 border border-white/10 rounded-2xl p-6">
               <h4 className="text-white font-semibold mb-2">Diverse service portfolio</h4>
@@ -214,7 +214,7 @@ export default function AmabillsCaseStudyPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center sm:text-left mb-8">
             <div className="inline-flex items-center gap-2 bg-white/5 text-gray-200 px-3 py-1.5 rounded-full text-xs border border-white/10 mb-3">The Results</div>
-            <h3 className="text-3xl font-semibold">Established market leadership in Nigeria's tech sector</h3>
+            <h3 className="text-3xl font-semibold">Established market leadership in Nigeria&apos;s tech sector</h3>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -245,7 +245,7 @@ export default function AmabillsCaseStudyPage() {
             <div className="absolute -inset-4 bg-white/5 rounded-3xl blur-xl"></div>
             <blockquote className="relative bg-black/40 border border-white/10 rounded-3xl p-8 text-gray-300">
               <p className="text-lg leading-relaxed">
-                "Clearview Marketing helped us establish our brand as a trusted software development partner in Nigeria. Their content strategy and digital presence optimization have been instrumental in attracting enterprise clients across multiple sectors. We've seen remarkable growth in our client base and market recognition."
+                &quot;Clearview Marketing helped us establish our brand as a trusted software development partner in Nigeria. Their content strategy and digital presence optimization have been instrumental in attracting enterprise clients across multiple sectors. We&apos;ve seen remarkable growth in our client base and market recognition.&quot;
               </p>
               <footer className="mt-4 text-sm text-white/80">CEO, Amabills Technologies</footer>
             </blockquote>

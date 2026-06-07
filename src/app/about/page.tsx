@@ -6,10 +6,8 @@ import Link from 'next/link';
 export default function AboutPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
-    setIsHydrated(true);
     const handleScroll = () => setScrollPosition(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -197,7 +195,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white">Transparency</h3>
-                  <p className="text-gray-300 leading-relaxed mt-2">We believe in complete transparency. You'll always know exactly what we're doing, why we're doing it, and how it's performing.</p>
+                  <p className="text-gray-300 leading-relaxed mt-2">We believe in complete transparency. You&apos;ll always know exactly what we&apos;re doing, why we&apos;re doing it, and how it&apos;s performing.</p>
                   <div className="mt-4 h-px bg-white/10"></div>
                 </div>
               </div>
@@ -324,7 +322,7 @@ export default function AboutPage() {
                   
                   <p className="text-lg text-gray-300 leading-relaxed">
                     Sarah founded Clearview Marketing with a vision to bring transparency and measurable results to digital growth. 
-                    With over 8 years in performance marketing, she's helped hundreds of businesses scale through data-driven strategies.
+                    With over 8 years in performance marketing, she&apos;s helped hundreds of businesses scale through data-driven strategies.
                   </p>
                   
                   <div className="grid grid-cols-2 gap-6">
@@ -420,7 +418,7 @@ export default function AboutPage() {
                   </span>
                 </h3>
                 <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-                  Let's discuss how our team can help transform your digital presence and drive real business growth.
+                  Let&apos;s discuss how our team can help transform your digital presence and drive real business growth.
                 </p>
                 
                 {/* Trust badges */}

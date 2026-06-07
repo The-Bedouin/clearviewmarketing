@@ -115,7 +115,7 @@ export default function CityCenterBarbershopCaseStudyPage() {
             City Center Barbershop: Premier Grooming in Amsterdam
           </h1>
           <p className="text-gray-300 text-lg max-w-3xl">
-            Our agency partnered with City Center Barbershop, located in Amsterdam's vibrant Central Station area, to drive unprecedented growth through strategic advertising and SEO optimization, achieving 16k visitors with the lowest cost per keyword in the Netherlands.
+            Our agency partnered with City Center Barbershop, located in Amsterdam&apos;s vibrant Central Station area, to drive unprecedented growth through strategic advertising and SEO optimization, achieving 16k visitors with the lowest cost per keyword in the Netherlands.
           </p>
         </div>
       </header>
@@ -143,9 +143,9 @@ export default function CityCenterBarbershopCaseStudyPage() {
             <div className="inline-flex items-center gap-2 bg-white/5 text-gray-200 px-3 py-1.5 rounded-full text-xs border border-white/10 mb-4">
               Project Overview
             </div>
-            <h2 className="text-2xl sm:text-3xl font-semibold mb-4">Transforming a local barbershop into Amsterdam's premier grooming destination</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold mb-4">Transforming a local barbershop into Amsterdam&apos;s premier grooming destination</h2>
             <p className="text-gray-300 leading-relaxed">
-              City Center Barbershop sought to establish dominance in Amsterdam's competitive grooming market. We implemented a comprehensive digital strategy combining targeted advertising campaigns with local SEO optimization to drive foot traffic and online bookings from their prime Central Station location.
+              City Center Barbershop sought to establish dominance in Amsterdam&apos;s competitive grooming market. We implemented a comprehensive digital strategy combining targeted advertising campaigns with local SEO optimization to drive foot traffic and online bookings from their prime Central Station location.
             </p>
           </div>
         </div>
@@ -156,12 +156,12 @@ export default function CityCenterBarbershopCaseStudyPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center sm:text-left mb-8">
             <div className="inline-flex items-center gap-2 bg-white/5 text-gray-200 px-3 py-1.5 rounded-full text-xs border border-white/10 mb-3">The Challenge</div>
-            <h3 className="text-3xl font-semibold">Standing out in Amsterdam's competitive grooming market</h3>
+            <h3 className="text-3xl font-semibold">Standing out in Amsterdam&apos;s competitive grooming market</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-black/40 border border-white/10 rounded-2xl p-6">
               <h4 className="text-white font-semibold mb-2">High competition</h4>
-              <p className="text-gray-400 text-sm">Dozens of barbershops competing for the same local customers in Amsterdam's city center.</p>
+              <p className="text-gray-400 text-sm">Dozens of barbershops competing for the same local customers in Amsterdam&apos;s city center.</p>
             </div>
             <div className="bg-black/40 border border-white/10 rounded-2xl p-6">
               <h4 className="text-white font-semibold mb-2">Limited online presence</h4>
@@ -169,7 +169,7 @@ export default function CityCenterBarbershopCaseStudyPage() {
             </div>
             <div className="bg-black/40 border border-white/10 rounded-2xl p-6">
               <h4 className="text-white font-semibold mb-2">High advertising costs</h4>
-              <p className="text-gray-400 text-sm">Amsterdam's competitive market meant expensive keywords and low conversion rates.</p>
+              <p className="text-gray-400 text-sm">Amsterdam&apos;s competitive market meant expensive keywords and low conversion rates.</p>
             </div>
           </div>
         </div>
@@ -191,7 +191,7 @@ export default function CityCenterBarbershopCaseStudyPage() {
                 <li><span className="text-white/80 font-medium">Google My Business:</span> Optimized profile with strategic keywords, high-quality photos, and regular updates.</li>
                 <li><span className="text-white/80 font-medium">Local citations:</span> Consistent NAP (Name, Address, Phone) across 50+ local directories.</li>
                 <li><span className="text-white/80 font-medium">Review management:</span> Automated review collection system and proactive reputation management.</li>
-                <li><span className="text-white/80 font-medium">Local content:</span> Location-specific blog posts targeting "barbershop Amsterdam Central Station" and related terms.</li>
+                <li><span className="text-white/80 font-medium">Local content:</span> Location-specific blog posts targeting &quot;barbershop Amsterdam Central Station&quot; and related terms.</li>
               </ul>
             </div>
 
@@ -200,7 +200,7 @@ export default function CityCenterBarbershopCaseStudyPage() {
               <h4 className="text-xl font-semibold mb-3">Precision Advertising</h4>
               <ul className="space-y-2 text-gray-300 text-sm leading-relaxed">
                 <li><span className="text-white/80 font-medium">Geographic targeting:</span> Hyper-local targeting within 2km of Central Station and IJpassage area.</li>
-                <li><span className="text-white/80 font-medium">Keyword strategy:</span> Long-tail keywords like "barbershop near Central Station Amsterdam" to reduce competition.</li>
+                <li><span className="text-white/80 font-medium">Keyword strategy:</span> Long-tail keywords like &quot;barbershop near Central Station Amsterdam&quot; to reduce competition.</li>
                 <li><span className="text-white/80 font-medium">Ad scheduling:</span> Peak hours targeting (lunch breaks, after work) when foot traffic is highest.</li>
                 <li><span className="text-white/80 font-medium">Conversion optimization:</span> Direct booking integration with real-time availability and instant confirmation.</li>
               </ul>
@@ -245,7 +245,7 @@ export default function CityCenterBarbershopCaseStudyPage() {
             <div className="absolute -inset-4 bg-white/5 rounded-3xl blur-xl"></div>
             <blockquote className="relative bg-black/40 border border-white/10 rounded-3xl p-8 text-gray-300">
               <p className="text-lg leading-relaxed">
-                "Clearview Marketing transformed our business. We went from struggling to fill appointments to having a fully booked schedule. Their local SEO strategy and advertising approach gave us the lowest cost per click in the Netherlands while driving 16,000 visitors monthly."
+                &quot;Clearview Marketing transformed our business. We went from struggling to fill appointments to having a fully booked schedule. Their local SEO strategy and advertising approach gave us the lowest cost per click in the Netherlands while driving 16,000 visitors monthly.&quot;
               </p>
               <footer className="mt-4 text-sm text-white/80">Owner, City Center Barbershop</footer>
             </blockquote>

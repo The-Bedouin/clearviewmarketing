@@ -32,6 +32,12 @@ interface ScrollStackProps {
   useStickyPin?: boolean;
   onStackComplete?: () => void;
 }
+interface CardTransform {
+  translateY: number;
+  scale: number;
+  rotation: number;
+  blur: number;
+}
 
 const ScrollStack: React.FC<ScrollStackProps> = ({
   children,
@@ -55,7 +61,7 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
   const animationFrameRef = useRef<number | null>(null);
   const lenisRef = useRef<Lenis | null>(null);
   const cardsRef = useRef<HTMLElement[]>([]);
-  const lastTransformsRef = useRef(new Map<number, any>());
+  const lastTransformsRef = useRef(new Map<number, CardTransform>());
   const isUpdatingRef = useRef(false);
 
   const calculateProgress = useCallback((scrollTop: number, start: number, end: number) => {
@@ -150,7 +156,7 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
         const filter = newTransform.blur > 0 ? `blur(${newTransform.blur}px)` : '';
 
         card.style.transform = transform;
-        ;(card.style as any).filter = filter;
+        card.style.filter = filter;
 
         lastTransformsRef.current.set(i, newTransform);
       }
@@ -175,6 +181,8 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
     baseScale,
     rotationAmount,
     blurAmount,
+    snapOnStack,
+    useStickyPin,
     onStackComplete,
     calculateProgress,
     parsePercentage,
@@ -241,9 +249,9 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
       card.style.transformOrigin = 'top center';
       card.style.backfaceVisibility = 'hidden';
       card.style.transform = 'translateZ(0)';
-      ;(card.style as any).webkitTransform = 'translateZ(0)';
-      ;(card.style as any).perspective = '1000px';
-      ;(card.style as any).webkitPerspective = '1000px';
+      card.style.setProperty('-webkit-transform', 'translateZ(0)');
+      card.style.setProperty('perspective', '1000px');
+      card.style.setProperty('-webkit-perspective', '1000px');
 
       if (useStickyPin) {
         card.style.position = 'sticky';
@@ -282,9 +290,12 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
     rotationAmount,
     blurAmount,
     enableSmoothScroll,
+    useStickyPin,
     onStackComplete,
     setupLenis,
     updateCardTransforms,
+    handleScroll,
+    parsePercentage,
   ]);
 
   return (

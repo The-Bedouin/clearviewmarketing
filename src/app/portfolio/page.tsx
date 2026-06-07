@@ -61,8 +61,7 @@ type Filter = typeof FILTERS[number];
 
 export default function PortfolioPage() {
   const [filter, setFilter] = useState<Filter>('All');
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+
 
   // Mobile section snap helpers
   const heroRef = useRef<HTMLElement | null>(null);
@@ -385,7 +384,7 @@ export default function PortfolioPage() {
               transition={{ duration: 0.25 }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10"
             >
-              {filtered.map((item, idx) => (
+              {filtered.map((item) => (
                 <div key={item.id} className="relative aspect-[4/3] sm:aspect-[16/10] lg:aspect-[18/11]">
                   {item.id === 'packmate' ? (
                     <Link href="/portfolio/packmate" className="block h-full">
@@ -529,7 +528,7 @@ export default function PortfolioPage() {
           <div className="relative bg-gradient-to-br from-black/40 via-gray-900/40 to-black/40 backdrop-blur-xl rounded-3xl p-8 border border-white/10">
             <div className="text-center">
               <h3 className="text-3xl sm:text-4xl font-bold text-white mb-4">Want results like these?</h3>
-              <p className="text-gray-300 mb-8">Book a free strategy call and we'll map the fastest path to ROI for your brand.</p>
+              <p className="text-gray-300 mb-8">Book a free strategy call and we&apos;ll map the fastest path to ROI for your brand.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://okconsulting.as.me/?appointmentType=59448363" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 rounded-full font-semibold">Schedule a Call</a>
                 <Link href="/about" className="border border-white/20 hover:border-orange-400 text-white hover:text-orange-300 px-6 py-3 rounded-full font-semibold hover:bg-orange-500/10">View Services</Link>

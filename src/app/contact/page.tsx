@@ -109,7 +109,7 @@ export default function ContactPage() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-300 text-sm mb-4 backdrop-blur-sm">
               Get in touch
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4">Let's build your next growth chapter.</h1>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4">Let&apos;s build your next growth chapter.</h1>
             <p className="text-gray-300 text-lg max-w-2xl">Tell us about your goals. We’ll reply within one business day with next steps and a tailored plan.</p>
           </motion.div>
         </div>

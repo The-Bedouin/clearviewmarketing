@@ -131,7 +131,7 @@ export default function MedicusCaseStudyPage() {
             </div>
             <div className="bg-black/40 border border-white/10 rounded-2xl p-6">
               <h4 className="text-white font-semibold mb-2">Market expansion needs</h4>
-              <p className="text-gray-400 text-sm">Required visual tools to support rapid expansion across Nigeria's diverse regions.</p>
+              <p className="text-gray-400 text-sm">Required visual tools to support rapid expansion across Nigeria&apos;s diverse regions.</p>
             </div>
           </div>
         </div>
@@ -205,7 +205,7 @@ export default function MedicusCaseStudyPage() {
             <div className="absolute -inset-4 bg-white/5 rounded-3xl blur-xl"></div>
             <blockquote className="relative bg-black/40 border border-white/10 rounded-3xl p-8 text-gray-300">
               <p className="text-lg leading-relaxed">
-                "Clearview transformed our brand identity while honoring our 35-year heritage. Their design work and digital strategy have been instrumental in our expansion across Nigeria."
+                &quot;Clearview transformed our brand identity while honoring our 35-year heritage. Their design work and digital strategy have been instrumental in our expansion across Nigeria.&quot;
               </p>
               <footer className="mt-4 text-sm text-white/80">Marketing Director, Medicus Industries Limited</footer>
             </blockquote>
