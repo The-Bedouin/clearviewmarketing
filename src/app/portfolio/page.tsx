@@ -133,9 +133,11 @@ export default function PortfolioPage() {
             {/* Logo with enhanced hover effects */}
             <div className="flex-shrink-0">
               <Link href="/" className="block">
-                <img 
+                <Image 
                   src="/long.svg" 
                   alt="Clearview Marketing" 
+                  width={160}
+                  height={32}
                   className="h-8 w-auto hover:opacity-80 transition-all duration-300 cursor-pointer transform hover:scale-105"
                 />
               </Link>
@@ -546,9 +548,11 @@ export default function PortfolioPage() {
             {/* Brand + socials */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <img 
+                <Image 
                   src="/long.svg" 
                   alt="Clearview Marketing" 
+                  width={160}
+                  height={32}
                   className="h-8 w-auto"
                 />
               </div>
