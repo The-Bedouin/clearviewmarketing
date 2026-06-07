@@ -22,9 +22,11 @@ export default function PackmateCaseStudyPage() {
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link href="/" className="block">
-                <img 
+                <Image 
                   src="/long.svg" 
                   alt="Clearview Marketing" 
+                  width={160}
+                  height={32}
                   className="h-8 w-auto hover:opacity-80 transition-all duration-300 cursor-pointer transform hover:scale-105"
                 />
               </Link>
@@ -272,9 +274,11 @@ export default function PackmateCaseStudyPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 items-start">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <img 
+                <Image 
                   src="/long.svg" 
                   alt="Clearview Marketing" 
+                  width={160}
+                  height={32}
                   className="h-8 w-auto"
                 />
               </div>
